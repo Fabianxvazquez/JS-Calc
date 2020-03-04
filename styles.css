@@ -6,18 +6,46 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  background: linear-gradient(to right, rgb(255, 208, 0), rgb(0, 255, 115));
 }
 
 .calculator-grid {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto)repeat(5, 100px);
 }
 
 .calculator-grid > button {
-  
+  font-size:2rem;
+  border: 2px solid rgb(201, 199, 199);
+  outline: none;
+  background-color: rgb(247, 243, 245);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(180, 178, 178);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+}
+
+.output .left-hand {
+  font-size: 1.5rem;
+}
+
+.output .right-hand {
+  font-size: 2.5rem;
 }
